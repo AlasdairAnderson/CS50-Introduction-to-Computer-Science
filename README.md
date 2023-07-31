@@ -1,2 +1,3 @@
-# CS50-Introduction-to-Computer-Science
-CS50x 2023 repository. This repository contains solutions and explanations to the problems encountered during the CS50x 2023 course. This course covers many topics from C to Flash and is intended to give an introduction to computer science.
+# CS50x
+## Welcome to my CS50x 2023 repository
+This repository contains the methodology and solutions to the wekkly problem sets. This is an exersise for my to try and explain some of the concepts lerned throughout the course and how I implomented them during the problem sets. Through out the course goes over many concepts incompassing languages from C to Flash.
