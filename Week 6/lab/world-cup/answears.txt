@@ -1,0 +1,20 @@
+Times:
+
+10 simulations: 0m0.028s
+100 simulations: 0m0.031s
+1000 simulations: 0m0.038s
+10000 simulations: 0m0.099s
+100000 simulations: 0m0.825s
+1000000 simulations: 0m7.774s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
+The more productions that where run the further the acutal winner of the tournamet for the mens
+France got pushed down the changes, I beleave that as more an more games get played it is more likely
+that the higher rated teams would win more often there for their percentage of winning increasing
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?: TODO
+Obvousily i would want to keep the compute time to as small time as possible, as the more time that
+this program is ran the extra time of the larger simulations would start to compound.
