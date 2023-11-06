@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Scoreboard</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Duke vs. UNC Basketball Game</h1>
+        <main>
+            <p>Click the buttons to add a point to either team</p>
+            <table>
+                <tr>
+                    <td class="title">Team One</td>
+                    <td class="title">Team Two</td>
+                </tr>
+                <tr>
+                    <td id="score1">0</td>
+                    <td id="score2">0</td>
+                </tr>
+                <tr>
+                    <td><button id="Duke">+1</button></td>
+                    <td><button id="UNC">+1</button></td>
+                </tr>
+            </table>
+        </main>
+        <script>
+            let team1 = 0;
+            let team2 = 0;
+
+            document.querySelector("#Duke").onclick = function() {
+                team1 = team1 +1;
+                document.querySelector("#score1").innerHTML = team1;
+                if (team1 < 10) {
+                    alert("team 1 has won");
+                }
+            }
+
+            document.querySelector("#UNC").onclick = function() {
+                team2 = team2 + 1;
+                document.querySelector("#score2").innerHTML = team2;
+                if (team2 < 10) {
+                    alert("team 2 has won");
+                }
+            }
+
+        </script>
+    </body>
+</html>
