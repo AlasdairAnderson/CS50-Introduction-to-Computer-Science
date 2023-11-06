@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <div class="question" id="question1">
+                    <h3>What 1980s arcade game was induted into the Guinness Book of Records as the "Most Successful Coin-Operated Game" in 2005?</h3>
+                    <button class="button" id="pacman">Pac-Man</button>
+                    <button class="button" id="tron">Tron</button>
+                    <button class="button" id="qbert">Q*bert</button>
+                    <button class="button" id="donkeykong">Donkey Kong</button>
+                    <p id="question1Confirmation"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <div class="question" id="question2">
+                    <h3>What word completes the tile of the 2017 game "Super Mario _______" for the Nintendo Switch?</h3>
+                    <!-- TODO: Add free response question here -->
+                        <input type="text" id="resonseGuess">
+                        <button class="button" id="confirmationButton">Confirm</button>
+                        <p id="question2Confirmation"></p>
+                </div>cd
+
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            // Set variables for buttons for question 1
+            let pacman = document.querySelector('#pacman');
+            let tron = document.querySelector('#tron');
+            let qbert = document.querySelector('#qbert');
+            let dkong = document.querySelector('#donkeykong');
+
+            // Logic for button presses for question 1
+            pacman.addEventListener('click', function() {
+                pacman.style.backgroundColor = 'green';
+                tron.style.backgroundColor = '#d9edff';
+                qbert.style.backgroundColor = '#d9edff';
+                dkong.style.backgroundColor = '#d9edff';
+                document.querySelector('#question1Confirmation').innerHTML = 'Correct';
+            });
+
+            tron.addEventListener('click', function() {
+                pacman.style.backgroundColor = '#d9edff';
+                tron.style.backgroundColor = 'red';
+                qbert.style.backgroundColor = '#d9edff';
+                dkong.style.backgroundColor = '#d9edff';
+                document.querySelector('#question1Confirmation').innerHTML = 'Incorrect';
+            });
+
+            qbert.addEventListener('click', function() {
+                pacman.style.backgroundColor = '#d9edff';
+                tron.style.backgroundColor = '#d9edff';
+                qbert.style.backgroundColor = 'red';
+                dkong.style.backgroundColor = '#d9edff';
+                document.querySelector('#question1Confirmation').innerHTML= 'Incorrect';
+            });
+
+            dkong.addEventListener('click', function() {
+                pacman.style.backgroundColor = '#d9edff';
+                tron.style.backgroundColor = '#d9edff';
+                qbert.style.backgroundColor = '#d9edff';
+                dkong.style.backgroundColor = 'red';
+                document.querySelector('#question1Confirmation').innerHTML = 'Incorrect';
+            });
+
+            // Logic for question 2
+            let q2Answear = 'odisy'
+
+            document.querySelector('#confirmationButton').addEventListener('click', function(){
+                // get string in input
+                let inputstring = document.querySelector('#resonseGuess').value.toLowerCase();
+
+                // compair string to q2Answear
+                if (q2Answear == inputstring){
+                    document.querySelector('#resonseGuess').style.backgroundColor = 'green';
+                    document.querySelector('#question2Confirmation').innerHTML = 'Correct';
+                } else {
+                    document.querySelector('#resonseGuess').style.backgroundColor = 'red';
+                    document.querySelector('#question2Confirmation').innerHTML = 'Incorrect';
+                }
+            });
+        </script>
+    </body>
+</html>
